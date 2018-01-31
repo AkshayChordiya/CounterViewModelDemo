@@ -4,7 +4,7 @@ Simple counter app demo for [Caster.io](https://caster.io) course using ViewMode
 Made for **Android Architecture Components Course - Deep Dive** on caster.io which is coming soon!
 
 ## Component Demonstrated
-- [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle.html)
+- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel.html)
 
 ### Prerequisites
 
