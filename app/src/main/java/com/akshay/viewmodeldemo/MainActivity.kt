@@ -1,5 +1,6 @@
 package com.akshay.viewmodeldemo
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,12 +14,13 @@ class MainActivity : AppCompatActivity() {
 
         val counterViewModel = ViewModelProviders.of(this).get(CounterViewModel::class.java)
 
-        count.text = counterViewModel.counter.toString()
+        counterViewModel.counter.observe(this, Observer {
+            count.text = counterViewModel.counter.toString()
+        })
 
         // Incrementing the count
         increment.setOnClickListener {
-            counterViewModel.counter++
-            count.text = counterViewModel.counter.toString()
+            counterViewModel.increment()
         }
     }
 }
