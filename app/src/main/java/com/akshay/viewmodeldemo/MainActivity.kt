@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         val counterViewModel = ViewModelProviders.of(this).get(CounterViewModel::class.java)
 
-        counterViewModel.counter.observe(this, Observer {
-            count.text = counterViewModel.counter.toString()
+        counterViewModel.counter.observe(this, Observer { num ->
+            count.text = num.toString()
         })
 
         // Incrementing the count
